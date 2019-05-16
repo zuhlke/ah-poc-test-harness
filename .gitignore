@@ -1,2 +1,6 @@
 .idea/workspace.xml
 __pycache__
+.DS_Store
+jmeter_results.csv
+webreport/
+jmeter.log

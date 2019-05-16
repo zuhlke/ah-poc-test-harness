@@ -30,6 +30,10 @@ Usage: `python3 main.py <option>`
 
 Tests can also be run from Pycharm
 
+## Jmeter
+To run the jmeter test execute the jmeter.sh file.
+A report is generated to jmeter_results.csv and a web report is available in the webreport folder.
+
 ## Tools
 
 Article which shows some more powerful tools: https://www.digitalocean.com/community/tutorials/an-introduction-to-load-testing

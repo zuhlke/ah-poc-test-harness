@@ -1,0 +1,1 @@
+jmeter -n -t papi-balance-load-test.jmx -l jmeter_results.csv -e -o webreport
