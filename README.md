@@ -15,11 +15,11 @@ Usage: `python3 main.py <option>`
 
 ## Examples of usage
 
-- Measure average latency over 10 requests
+#### Measure average latency over 10 requests
 
 `python3 main.py -n 10`
 
-- Measure throughput over 15 seconds
+#### Measure throughput over 15 seconds
 
 `python3 main.py -t 15`
 
@@ -27,6 +27,8 @@ Usage: `python3 main.py <option>`
 ## Run the tests
 
 `./test` or `python3 -m unittest test.py`
+
+Tests can also be run from Pycharm
 
 ## Tools
 

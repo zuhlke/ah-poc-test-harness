@@ -39,20 +39,22 @@ class Test(unittest.TestCase):
     def test_that_can_measure_avg_latency(self):
         num_requests_required = 100
         seconds_taken = 50
+        avg_latency_expected = seconds_taken / num_requests_required
 
         StubTimeRecorder.return_seconds = seconds_taken
         requester = RepeatRequester(StubEndpointHitter(), None, StubTimeRecorder)
 
         avg_latency = requester.avg_latency_over_n_requests(num_requests_required)
 
-        self.assertEqual(seconds_taken / num_requests_required, avg_latency)
+        self.assertEqual(avg_latency_expected, avg_latency)
 
     def test_that_can_measure_throughput(self):
         num_seconds = 5
         requests_made = 10
+        throughput_expected = requests_made / num_seconds
 
         requester = RepeatRequester(StubEndpointHitter(), StubStopwatch(num_seconds, requests_made), None)
 
         throughput = requester.throughput_over_t_seconds(num_seconds)
 
-        self.assertEqual(requests_made / num_seconds, throughput)
+        self.assertEqual(throughput_expected, throughput)
