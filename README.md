@@ -1,10 +1,10 @@
 # ah-poc-test-harness
 
-Exercises the ah-poc-papi
+Exercises the ah-poc-papi to make the following measurements.
 
-- Average latency
+- Average latency over N requests
 
-- Average throughput
+- Throughput over T seconds
 
 ## Usage
 
