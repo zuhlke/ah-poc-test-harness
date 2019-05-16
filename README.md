@@ -8,6 +8,8 @@ To run the jmeter test run `./jmeter.sh`.
 
 Results are generated to `jmeter_results.csv` and a web report is created as `webreport/`.
 
+- This jmeter test currently targets localhost
+
 ## Python script
 
 This exercises the ah-poc-papi to make the following measurements.
