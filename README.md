@@ -31,8 +31,10 @@ Usage: `python3 main.py <option>`
 Tests can also be run from Pycharm
 
 ## Jmeter
-To run the jmeter test execute the jmeter.sh file.
-A report is generated to jmeter_results.csv and a web report is available in the webreport folder.
+
+To run the jmeter test run `./jmeter.sh`.
+
+Results are generated to `jmeter_results.csv` and a web report is created as `webreport/`.
 
 ## Tools
 
