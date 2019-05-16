@@ -1,19 +1,29 @@
 # ah-poc-test-harness
 
-Exercises the ah-poc-papi to make the following measurements.
+Contains different ways of exercising the PoC PAPI and measuring the outputs of it.
+
+## Jmeter
+
+To run the jmeter test run `./jmeter.sh`.
+
+Results are generated to `jmeter_results.csv` and a web report is created as `webreport/`.
+
+## Python script
+
+This exercises the ah-poc-papi to make the following measurements.
 
 - Average latency over N requests
 
 - Throughput over T seconds
 
-## Usage
+### Usage
 
 Usage: `python3 main.py <option>`
 
 - Use the option `[-n <N>]` to measure average latency over N requests
 - Use the option `[-t <T>]` to measure average throughput over T seconds
 
-## Examples of usage
+### Examples of usage
 
 #### Measure average latency over 10 requests
 
@@ -24,17 +34,11 @@ Usage: `python3 main.py <option>`
 `python3 main.py -t 15`
 
 
-## Run the tests
+### Run the tests
 
 `./test` or `python3 -m unittest test.py`
 
 Tests can also be run from Pycharm
-
-## Jmeter
-
-To run the jmeter test run `./jmeter.sh`.
-
-Results are generated to `jmeter_results.csv` and a web report is created as `webreport/`.
 
 ## Tools
 
