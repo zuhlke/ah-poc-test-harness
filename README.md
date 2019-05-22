@@ -4,11 +4,16 @@ Contains different ways of exercising the PoC PAPI and measuring the outputs of 
 
 ## Jmeter
 
-To run the jmeter test run `./jmeter.sh`.
+### Build a test plan
 
-Results are generated to `jmeter_results.csv` and a web report is created as `webreport/`.
+`python3 build-test-plan.py`
 
-- This jmeter test currently targets localhost
+### Run a test
+
+`./jmeter.sh`.
+
+- A csv of results is generated as`jmeter_results.csv`
+- A webreport is created as `webreport/`. To open you webreport you can get the url from `./webreport-url`.
 
 ## Python script
 
