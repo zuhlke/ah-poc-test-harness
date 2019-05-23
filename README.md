@@ -6,9 +6,14 @@ Contains different ways of exercising the PoC PAPI and measuring the outputs of 
 
 ### Build a test plan
 
+- Creates a file `papi-balance-load-test.jmx` which is the test plan used by
+jmeter to run the performance tests.
+
 `python3 build-test-plan.py`
 
 ### Run a test
+
+- Reads the test plan file `papi-balance-load-test.jmx` and executes the test.
 
 `./jmeter.sh`.
 
@@ -39,7 +44,6 @@ Usage: `python3 main.py <option>`
 #### Measure throughput over 15 seconds
 
 `python3 main.py -t 15`
-
 
 ### Run the tests
 
