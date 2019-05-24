@@ -1,6 +1,23 @@
 import argparse
+import sys
 
 import requests
+
+
+def reset_sapi():
+    request_url = "https://ah-poc-sapi-cc-bal.cfapps.io/reset"
+    response = requests.post(request_url)
+    if response.status_code != 200:
+        raise Exception("Failed to reest SAPI")
+    else:
+        print("Reset SAPI behaviour to default")
+
+
+if sys.argv[1] == "--reset":
+    if len(sys.argv) > 2:
+        raise Exception("Pass the flag --reset as the only argument.")
+    reset_sapi()
+    exit(0)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--failurerate", help="Set the response failure rate in percent.", type=int)
@@ -13,8 +30,7 @@ def set_failure_rate(failure_rate):
     request_url = "https://ah-poc-sapi-cc-bal.cfapps.io/failureRatePc/" + str_failure_rate
     response = requests.post(request_url)
     if response.status_code != 200:
-        print("Failed to set failure rate to " + str_failure_rate)
-        raise Exception()
+        raise Exception("Failed to set failure rate to " + str_failure_rate)
     else:
         print("Set failure rate to " + str_failure_rate)
 
@@ -26,8 +42,7 @@ def set_delay_range(delay_range):
     request_url = "https://ah-poc-sapi-cc-bal.cfapps.io//perRequestDelayRangeMs?min=" + str_min_delay_ms + "&max=" + str_max_delay_ms
     response = requests.post(request_url)
     if response.status_code != 200:
-        print("Failed to set delay range to " + delay_range)
-        raise Exception()
+        raise Exception("Failed to set delay range to " + delay_range)
     else:
         print("Set delay range to " + delay_range)
 
