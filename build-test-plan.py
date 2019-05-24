@@ -52,3 +52,4 @@ test_plan_lines = """<?xml version="1.0" encoding="UTF-8"?>
 
 with open("papi-balance-load-test.jmx", "w+") as test_plan:
     test_plan.write(test_plan_lines)
+    print("Wrote jmeter test plan")

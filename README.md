@@ -11,6 +11,12 @@ jmeter to run the performance tests.
 
 `python3 build-test-plan.py`
 
+### Configure the cc SAPI
+
+- Sets the failure rate for the cc SAPI. In this case the SAPI returns 500s on 10% of requests.
+
+`python3 configure-cc-sapi.py --failurerate 10`
+
 ### Run a test
 
 - Reads the test plan file `papi-balance-load-test.jmx` and executes the test.
