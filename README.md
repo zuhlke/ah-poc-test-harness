@@ -13,12 +13,18 @@ jmeter to run the performance tests.
 
 ### Configure the cc SAPI
 
-- Sets the failure rate for the cc SAPI. In this case the SAPI returns 500s on 10% of requests.
+- Use a command like `python3 configure-cc-sapi.py --failurerate 10` to set the failure rate
+for the cc SAPI. In this case the SAPI returns 500s on 10% of requests.
 
-`python3 configure-cc-sapi.py --failurerate 10`
+- Use a command like `python3 configure-cc-sapi.py --delayrange 100-500` to set the range of
+values in ms for the random delay on each response from the SAPI. In this case, the SAPI will
+delay each response by a random duration between 100ms and 500ms.
 
 ### Run a test
 
+- Builds the test plan
+- Runs whatever SAPI configurations are specified in the `jmeter.sh` script.
+- Deletes the previous test outputs (the webreport and the csv) 
 - Reads the test plan file `papi-balance-load-test.jmx` and executes the test.
 
 `./jmeter.sh`.
