@@ -5,3 +5,4 @@ jmeter_results.csv
 webreport/
 jmeter.log
 papi-balance-load-test.jmx
+.idea/inspectionProfiles/
