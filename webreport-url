@@ -1,1 +1,1 @@
-echo "file://$PWD/webreport/index.html"
+open "file://$PWD/webreport/index.html"
