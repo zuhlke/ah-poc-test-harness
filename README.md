@@ -4,7 +4,7 @@ Contains different ways of exercising the PoC PAPI and measuring the outputs of 
 
 ## Jmeter
 
-### Build a test plan
+### Build a test plan (optional)
 
 - Creates a file `papi-balance-load-test.jmx` which is the test plan used by
 jmeter to run the performance tests.
@@ -22,12 +22,17 @@ delay each response by a random duration between 100ms and 500ms.
 
 ### Run a test
 
-- Builds the test plan
+- Runs a JMX test plan passed in as the first argument
 - Runs whatever SAPI configurations are specified in the `jmeter.sh` script.
 - Deletes the previous test outputs (the webreport and the csv) 
 - Reads the test plan file `papi-balance-load-test.jmx` and executes the test.
 
-`./jmeter.sh`.
+`./jmeter.sh test-plan.jmx`.
+
+Example:
+- `./jmeter.sh papi-balance-load-blocking-30min-200threads.jmx` - runs 200threads for 30min against blocking balance endpoint
+- `./jmeter.sh papi-balance-load-reactive-30min-200threads.jmx` - runs 200threads for 30min against reactive balance endpoint
+
 
 - A csv of results is generated as`jmeter_results.csv`
 - A webreport is created as `webreport/`. To open you webreport you can get the url from `./webreport-url`.
