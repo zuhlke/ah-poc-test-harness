@@ -22,10 +22,9 @@ delay each response by a random duration between 100ms and 500ms.
 
 ### Run a test
 
-- Runs a JMX test plan passed in as the first argument
 - Runs whatever SAPI configurations are specified in the `jmeter.sh` script.
 - Deletes the previous test outputs (the webreport and the csv) 
-- Reads the test plan file `papi-balance-load-test.jmx` and executes the test.
+- Runs a JMX test plan passed in as the first argument
 
 `./jmeter.sh test-plan.jmx`.
 
